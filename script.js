@@ -1,0 +1,1 @@
+const form=document.getElementById('bookForm');const message=document.getElementById('demoMessage');if(form){form.addEventListener('submit',e=>{e.preventDefault();form.style.display='none';message.style.display='block';});}
