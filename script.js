@@ -3,22 +3,22 @@ const message=document.getElementById('demoMessage');
 if(form){form.addEventListener('submit',e=>{e.preventDefault();form.style.display='none';if(message)message.style.display='block';});}
 
 document.addEventListener('DOMContentLoaded',()=>{
-  // Claire's latest brief: keep HYROX as a coaching service, but don't position her as a HYROX athlete.
+  // Keep HYROX available, but position Claire more broadly around strength, performance and event coaching.
   const socialHeading=document.querySelector('#social h2');
   const socialCopy=document.querySelector('#social .lede');
   if(socialHeading) socialHeading.textContent='Coach first. Gym girl always.';
   if(socialCopy) socialCopy.textContent='Training clips, coaching, tips and the real-life side of fitness — knowledgeable, approachable and never pretending every workout has to be glamorous.';
 
-  const hyrox=document.getElementById('hyrox');
+  const hyrox=document.getElementById('performance');
   if(hyrox){
     const heading=hyrox.querySelector('h2');
     const lede=hyrox.querySelector('.sales-lede');
     const panelHeading=hyrox.querySelector('.offer-panel h3');
     const panelCopy=hyrox.querySelector('.offer-panel p');
-    if(heading) heading.textContent='Smart event coaching without turning every session into punishment.';
-    if(lede) lede.textContent='Claire’s role is the coaching: planning the build, balancing strength and running, reviewing progress and adjusting the plan as the event gets closer.';
-    if(panelHeading) panelHeading.textContent='Good HYROX coaching is about the plan, not the hype.';
-    if(panelCopy) panelCopy.textContent='Programming can be built around your experience, event timeline, current strengths and weaknesses, with regular check-ins and changes along the way.';
+    if(heading) heading.textContent='Smart performance coaching without turning every session into punishment.';
+    if(lede) lede.textContent='Claire’s role is the coaching: planning the build, balancing strength and conditioning, reviewing progress and adjusting the plan as the goal or event gets closer.';
+    if(panelHeading) panelHeading.textContent='Good performance coaching is about the plan, not the hype.';
+    if(panelCopy) panelCopy.textContent='Programming can be built around your experience, goal or event timeline, current strengths and weaknesses, with regular check-ins and changes along the way.';
   }
 
   // Make the working pricing match what Claire actually described in the chat.
@@ -55,24 +55,24 @@ document.addEventListener('DOMContentLoaded',()=>{
       const summary=cards[2].querySelector('.price-summary');
       const list=cards[2].querySelector('.price-list');
       if(tier) tier.textContent='Tier 03 · Event focused';
-      if(title) title.textContent='HYROX / Event Coaching';
+      if(title) title.textContent='Performance / Event Coaching';
       if(price) price.innerHTML='£100 <small>/ month</small><span class="price-alt">or £25/week during an event build</span>';
-      if(summary) summary.textContent='Based on Claire’s current event clients while she reviews the final package structure.';
-      if(list) list.innerHTML='<li>Event-focused training plan</li><li>Weekly check-ins</li><li>Training tweaks through the build</li><li>Macro guidance and adjustments</li><li>Programming shaped around the event timeline</li>';
+      if(summary) summary.textContent='Based on Claire’s current event coaching while she reviews the final package structure.';
+      if(list) list.innerHTML='<li>Performance / event training plan</li><li>Weekly check-ins</li><li>Training tweaks through the build</li><li>Macro guidance and adjustments</li><li>Programming shaped around the goal or event timeline</li>';
     }
 
     const foot=pricing.querySelector('.pricing-foot');
     if(foot) foot.innerHTML='<strong>Working draft:</strong> package names, inclusions and final pricing are still being reviewed before launch.';
   }
 
-  // Keep the results section customer-facing while Claire waits for the approved HYROX testimonial.
+  // Keep the results section customer-facing while Claire waits for the approved event-client testimonial.
   const results=document.getElementById('results');
   if(results){
     const lede=results.querySelector('.results-head .sales-lede');
     if(lede) lede.textContent='Real client progress and approved testimonials will be featured here. The aim is to show the story behind the result, not fill the page with generic claims.';
     const cards=[...results.querySelectorAll('.proof-card')];
     if(cards[0]) cards[0].innerHTML='<small>Client progress</small><div><h3>Progress story slot</h3><p>Reserved for Claire’s approved client photo, result and a little context around the work behind it.</p></div>';
-    if(cards[1]) cards[1].innerHTML='<small>HYROX client</small><div><h3>Testimonial slot</h3><p>Ready for the short testimonial Claire is currently collecting from her event client.</p></div>';
+    if(cards[1]) cards[1].innerHTML='<small>Event client</small><div><h3>Testimonial slot</h3><p>Ready for the short testimonial Claire is currently collecting from her event client.</p></div>';
   }
 
   // Add a tasteful image framework now, ready for Claire's own photos rather than stock imagery.
